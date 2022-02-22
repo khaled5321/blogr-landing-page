@@ -1,0 +1,10 @@
+#####################################################
+*.sketch
+*.fig
+*.json
+*.xd
+.DS_Store
+.prettierignore
+
+tailwind.config.js
+node_modules/
