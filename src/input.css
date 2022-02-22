@@ -2,3 +2,93 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+
+    /* overpass-300 - latin */
+    @font-face {
+        font-family: 'Overpass';
+        font-style: normal;
+        font-weight: 300;
+        src: local(''),
+            url('../fonts/overpass-v10-latin-300.woff2') format('woff2'),
+            /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url('../fonts/overpass-v10-latin-300.woff') format('woff');
+        /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+
+    /* overpass-600 - latin */
+    @font-face {
+        font-family: 'Overpass';
+        font-style: normal;
+        font-weight: 600;
+        src: local(''),
+            url('../fonts/overpass-v10-latin-600.woff2') format('woff2'),
+            /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url('../fonts/overpass-v10-latin-600.woff') format('woff');
+        /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+
+    /* ubuntu-regular - latin */
+    @font-face {
+        font-family: 'Ubuntu';
+        font-style: normal;
+        font-weight: 400;
+        src: local(''),
+            url('../fonts/ubuntu-v19-latin-regular.woff2') format('woff2'),
+            /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url('../fonts/ubuntu-v19-latin-regular.woff') format('woff');
+        /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+
+    /* ubuntu-500 - latin */
+    @font-face {
+        font-family: 'Ubuntu';
+        font-style: normal;
+        font-weight: 500;
+        src: local(''),
+            url('../fonts/ubuntu-v19-latin-500.woff2') format('woff2'),
+            /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url('../fonts/ubuntu-v19-latin-500.woff') format('woff');
+        /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+
+    /* ubuntu-700 - latin */
+    @font-face {
+        font-family: 'Ubuntu';
+        font-style: normal;
+        font-weight: 700;
+        src: local(''),
+            url('../fonts/ubuntu-v19-latin-700.woff2') format('woff2'),
+            /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url('../fonts/ubuntu-v19-latin-700.woff') format('woff');
+        /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+
+
+}
+@layer components{
+    .mobile-img{
+        @apply before:content-[''] before:absolute before:bg-mobilebackground before:bg-no-repeat before:bg-center before:top-[100px]
+        before:w-full before:h-full before:-z-10 before:bg-cover before:scale-[2.8] before:left-[165px];
+    }
+    .desktop-img{
+        
+    }
+    .footer-link{
+        @apply text-darkblue-100 my-2 hover:underline transition-all;
+    }
+    .arrowdown{
+        @apply after:absolute after:border-solid after:border-lightred-50 after:border-t-0 after:border-r-[3px] 
+        after:border-b-[3px] after:border-l-0 after:inline-block after:p-[3px] after:rotate-45
+        after:m-1  after:transition-all;
+    }
+
+    .accordion{
+        @apply my-[8px] transition-all text-darkblue-300 font-bold;
+    }
+    .panel{
+        @apply flex flex-col items-center w-[16rem] 
+        rounded gap-5 bg-[#EFEFF1] text-[#616F7A] mb-[27px]
+        overflow-hidden transition-all max-h-0;
+    }
+}

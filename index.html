@@ -1,39 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link href="/dist/output.css" rel="stylesheet">
   <title>Frontend Mentor | [Blogr]</title>
 
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    :root {
+      font-family: 'Overpass';
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+    .rotate::after{
+      transform: rotate(-135deg);
+
+    }
+    .span1{
+      transform: rotate(45deg) translate(7px, 7px);
+    }
+    .span3{
+      transform: rotate(-45deg) translate(7px, -7px);
+    }
   </style>
 </head>
-<body>
-  Product
 
-  Overview
-  Pricing
-  Marketplace
-  Features
-  Integrations
+<body class="overflow-x-hidden">
+  <header class="bg-gradient-to-b from-gradient-50 to-gradient-100 
+  md:bg-gradient-to-r rounded-bl-[40px] mobile-img relative z-[1] overflow-clip 
+   ">
+    <div class="container px-6 mx-auto">
+      <nav class="pt-6 pb-20 flex flex-row items-center">
+        <a href="/" class="text-white font-overpass font-semibold text-3xl">Blogr</a>
 
-  Company
+        <div id="ham-menu" class="flex flex-col gap-[.375rem] ml-auto md:hidden">
+          <span class="bg-white w-8 h-[.25rem] transition-all rounded-sm"></span>
+          <span class="bg-white w-8 h-[.25rem] transition-all rounded-sm"></span>
+          <span class="bg-white w-8 h-[.25rem] transition-all rounded-sm"></span>
+        </div>
+      </nav>
+    
+      <div class="px-6">
+        <h1 class="text-white text-3xl text-center pb-7 font-semibold">
+          A modern publishing platform
+        </h1>
 
-  About
-  Team
-  Blog
-  Careers
+        <p class="text-base font-light text-white text-center pb-14">
+          Grow your audience and build your online brand
+        </p>
 
-  Connect
+        <div class="flex flex-row gap-6 justify-center items-center pb-36">
+          <a href="#" class="py-2 px-4 bg-white text-lightred-100 text-center font-bold 
+          rounded-[2.5rem] hover:text-white hover:bg-lightred-50 transition-all">
+            Start for Free
+          </a>
+          <a href="#" class="py-2 px-4 border-[1px] bg-transparent text-white text-center font-bold 
+            rounded-[2.5rem] hover:bg-white hover:text-lightred-100 transition-all">
+            Learn More
+          </a>
+        </div>
+      </div>
 
-  Contact
-  Newsletter
-  LinkedIn
+    </div>
+  </header>
+  <div id="mobile-menu" class="bg-white py-6 absolute mx-auto left-0 right-0 w-[18rem]
+      flex flex-col items-center mt-[80px] rounded shadow-xl scale-0 transition-all
+      z-10 top-0">
+        <button class="accordion arrowdown">Product</button>
+        <div class="panel">
+          <a href="#">Overview</a>
+          <a href="#">Pricing</a>
+          <a href="#">MarketPlace</a>
+          <a href="#">Features</a>
+          <a href="#">Integrations</a>
+        </div>
+        
+        <button class="accordion arrowdown">Company</button>
+        <div class="panel">
+          <a href="#">About</a>
+          <a href="#">Team</a>
+          <a href="#">Blog</a>
+          <a href="#">Careers</a>
+        </div>
+        
+        <button class="accordion arrowdown">Connect</button>
+        <div class="panel">
+          <a href="#">Contact</a>
+          <a href="#">Newsletter</a>
+          <a href="#">LinkedIn</a>
+        </div> 
+        <span class="w-[230px] h-[1px] bg-darkblue-100"></span>
+
+        <a href="#" class="py-2 px-4 bg-white text-darkblue-300 text-center font-bold 
+          rounded-[2.5rem] my-4">
+            Login
+          </a>
+          <a href="#" class="py-2 px-7 border-[1px] bg-gradient-to-r from-gradient-50 
+          to-gradient-100 text-white text-center font-bold rounded-[2.5rem] mb-2">
+            Sign Up
+          </a>
+      </div>
+
+
+  <main class="mx-auto pt-28">
+    <h1 class="text-center font-bold text-darkblue-300 text-2xl pb-12">Designed for the future</h1>
+
+    <div class="flex flex-col justify-center items-center px-6">
+      <img src="./images/illustration-editor-mobile.svg" alt="" aria-hidden="true" class="pb-12">
+      <div>
+        <h1 class="text-center font-bold text-darkblue-300 text-2xl pb-7 px-6">Introducing an extensible editor</h1>
+        <p class="text-center text-darkblue-200 text-lg pb-14">Blogr features an exceedingly intuitive interface which
+          lets you focus on one thing: creating content.
+          The editor supports management of multiple blogs and allows easy manipulation of embeds such as images,
+          videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or
+          change the looks of a blog.</p>
+        <h1 class="text-center font-bold text-darkblue-300 text-2xl pb-7 px-6">Robust content management</h1>
+        <p class="text-center text-darkblue-200 text-lg pb-[17.3125rem]">
+          Flexible content management enables users to easily move through posts. Increase the usability of your blog
+          by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
+        </p>
+      </div>
+    </div>
+
+    <div class="bg-gradient-200 rounded-tr-[40px] rounded-bl-[40px]">
+      <div class="absolute w-[23rem] h-[23.375rem] left-0 right-0 mr-auto ml-auto overflow-hidden">
+        <img src="./images/bg-pattern-circles.svg" class="absolute scale-[1.4] top-[-25%]">
+      </div>
+      <img src="./images/illustration-phones.svg" class="absolute mt-[-50%]">
+
+      <h1 class='text-center font-bold text-white text-3xl pb-8 pt-56 relative'>
+        State of the Art Infrastructure
+      </h1>
+      <p class="text-base font-light text-darkblue-100 text-center pb-32 px-8">
+        With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity.
+        This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
+      </p>
+    </div>
+
+    <div class="flex flex-col justify-center items-center ">
+      <img src="./images/illustration-laptop-mobile.svg" alt="" aria-hidden="true" class="py-16 scale-[1.3]">
+      <div class="flex flex-col justify-center items-center">
+        <h1 class="text-center font-bold text-darkblue-300 text-2xl pb-7 ">
+          Free, open, simple
+        </h1>
+        <p class="text-center text-darkblue-200 pb-14 px-10">
+          Blogr is a free and open source application backed by a large community of helpful developers. It supports
+          features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools,
+          and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
+        </p>
+        <h1 class="text-center font-bold text-darkblue-300 text-2xl pb-7">
+          Powerful tooling
+        </h1>
+        <p class="text-center text-darkblue-200 px-8 pb-[6.25rem]">
+          Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a
+          breeze, but
+          capable of producing even the most complicated sites.
+        </p>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="bg-darkblue-500 rounded-tr-[40px]">
+    <div class="container px-6 mx-auto flex flex-col items-center">
+      <h1 class="py-16 text-white font-bold text-4xl">Blogr</h1>
+
+      <div class="flex flex-col items-center pb-14">
+        <h2 class="pb-6 text-white font-semibold">
+          Product
+        </h2>
+        <a href="#" class="footer-link">Overview</a>
+        <a href="#" class="footer-link">Pricing</a>
+        <a href="#" class="footer-link">Marketplace</a>
+        <a href="#" class="footer-link">Features</a>
+        <a href="#" class="footer-link">Integrations</a>
+      </div>
+
+      <div class="flex flex-col items-center pb-14">
+        <h2 class="pb-6 text-white font-semibold">
+          Company
+        </h2>
+        <a href="#" class="footer-link">About</a>
+        <a href="#" class="footer-link">Team</a>
+        <a href="#" class="footer-link">Blog</a>
+        <a href="#" class="footer-link">Careers</a>
+      </div>
+
+      <div class="flex flex-col items-center pb-16">
+        <h2 class="pb-6 text-white font-semibold">
+          Connect
+        </h2>
+        <a href="#" class="footer-link">Contact</a>
+        <a href="#" class="footer-link">Newsletter</a>
+        <a href="#" class="footer-link">LinkedIn</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- 
   
   Login
   Sign Up
@@ -43,59 +219,15 @@
 
   Start for Free
   Learn More
+ -->
 
-  Designed for the future
-
-  Introducing an extensible editor
-  Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
-  The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, 
-  videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or 
-  change the looks of a blog.
-
-  Robust content management
-  Flexible content management enables users to easily move through posts. Increase the usability of your blog 
-  by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
-
-  State of the Art Infrastructure
-  With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
-  This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
-
-  Free, open, simple
-  Blogr is a free and open source application backed by a large community of helpful developers. It supports 
-  features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
-  and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
-
-  Powerful tooling
-  Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
-  capable of producing even the most complicated sites.
-
-  Product
-
-  Overview
-  Pricing
-  Marketplace
-  Features
-  Integrations
-
-  Company
-
-  About
-  Team
-  Blog
-  Careers
-
-  Connect
-  
-  Contact
-  Newsletter
-  LinkedIn
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <div class="attribution font-ubunto text-base">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/khaled5321">Khaled Haggag</a>.
   </div>
-  <script src="./script.js">
-    
+  <script src="./src/script.js">
+
   </script>
 </body>
+
 </html>
