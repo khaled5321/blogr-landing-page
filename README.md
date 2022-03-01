@@ -31,6 +31,7 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - tailwind CSS
+- JavaScript
 
 ## Author
 
