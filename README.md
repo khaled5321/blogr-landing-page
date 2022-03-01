@@ -22,7 +22,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [solution](https://www.frontendmentor.io/solutions/responsive-landing-page-using-tailwind-css--dxGCZno8)
 - Live Site URL: [github pages](https://khaled5321.github.io/blogr-landing-page/)
 
 ## My process
