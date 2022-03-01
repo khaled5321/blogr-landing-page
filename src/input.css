@@ -72,7 +72,7 @@
         before:w-full before:h-full before:-z-10 before:bg-cover before:scale-[2.8] before:left-[165px];
     }
     .desktop-img{
-        
+        @apply before:bg-desktopbackground before:scale-[2] before:left-[11.875rem] before:top-[-3.75rem];
     }
     .footer-link{
         @apply text-darkblue-100 my-2 hover:underline transition-all;

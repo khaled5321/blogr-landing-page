@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="overflow-x-hidden">
 
 <head>
   <meta charset="UTF-8">
@@ -13,6 +13,7 @@
   <style>
     :root {
       font-family: 'Overpass';
+      -webkit-tap-highlight-color: transparent;
     }
 
     .attribution {
@@ -24,7 +25,7 @@
       color: hsl(228, 45%, 44%);
     }
     .rotate::after{
-      transform: rotate(-135deg);
+      transform: rotate(-135deg) translate(-7px);
 
     }
     .span1{
@@ -38,11 +39,79 @@
 
 <body class="overflow-x-hidden">
   <header class="bg-gradient-to-b from-gradient-50 to-gradient-100 
-  md:bg-gradient-to-r rounded-bl-[40px] mobile-img relative z-[1] overflow-clip 
+  md:bg-gradient-to-r rounded-bl-[40px] mobile-img md:desktop-img
+  relative z-[1] overflow-clip 
    ">
     <div class="container px-6 mx-auto">
       <nav class="pt-6 pb-20 flex flex-row items-center">
         <a href="/" class="text-white font-overpass font-semibold text-3xl">Blogr</a>
+        
+        <div class="hidden md:flex md:flex-row md:px-16 lg:px-24 md:gap-12">
+          <div class="group">
+            <h2 class="text-white font-semibold arrowdown after:border-white
+            group-hover:after:rotate-[-135deg] group-hover:after:translate-x-[2px] transition-all
+            hover:cursor-pointer group-hover:underline">Product
+            </h2>
+            <div href="#" class="absolute bg-white rounded shadow-2xl scale-0 
+            transition-all group-hover:scale-100 flex flex-col mt-2 py-4 pl-4 w-36 ml-[-25px]">
+              <a href="#" class=" font-semibold 
+              text-darkblue-300 hover:text-darkblue-500 p-2 transition">Overview</a>
+              <a href="#" class=" font-semibold 
+              text-darkblue-300 hover:text-darkblue-500 p-2 transition">Pricing</a>
+              <a href="#" class=" font-semibold 
+              text-darkblue-300 hover:text-darkblue-500 p-2 transition">MarketPlace</a>
+              <a href="#" class=" font-semibold 
+              text-darkblue-300 hover:text-darkblue-500 p-2 transition">Features</a>
+              <a href="#" class=" font-semibold 
+              text-darkblue-300 hover:text-darkblue-500 p-2 transition">Integrations</a>
+            </div>
+          </div>
+
+          <div class="group">
+            <h2 class="text-white font-semibold arrowdown after:border-white
+            group-hover:after:rotate-[-135deg] group-hover:after:translate-x-[2px] transition-all
+            hover:cursor-pointer group-hover:underline">Company
+            </h2>
+            <div href="#" class="absolute bg-white rounded shadow-2xl scale-0 
+            transition-all group-hover:scale-100 flex flex-col mt-2 py-4 pl-4 w-36 ml-[-25px]">
+              <a href="#" class=" font-semibold 
+              text-darkblue-300 hover:text-darkblue-500 p-2 transition">About</a>
+              <a href="#" class=" font-semibold 
+              text-darkblue-300 hover:text-darkblue-500 p-2 transition">Team</a>
+              <a href="#" class=" font-semibold 
+              text-darkblue-300 hover:text-darkblue-500 p-2 transition">Blog</a>
+              <a href="#" class=" font-semibold 
+              text-darkblue-300 hover:text-darkblue-500 p-2 transition">Careers</a>
+            </div>
+          </div>
+
+          <div class="group">
+            <h2 class="text-white font-semibold arrowdown after:border-white
+            group-hover:after:rotate-[-135deg] group-hover:after:translate-x-[2px] transition-all
+            hover:cursor-pointer group-hover:underline">Connect
+            </h2>
+            <div href="#" class="absolute bg-white rounded shadow-2xl scale-0 
+            transition-all group-hover:scale-100 flex flex-col mt-2 py-4 pl-4 w-36 ml-[-25px]">
+              <a href="#" class=" font-semibold 
+              text-darkblue-300 hover:text-darkblue-500 p-2 transition">Contact</a>
+              <a href="#" class=" font-semibold 
+              text-darkblue-300 hover:text-darkblue-500 p-2 transition">Newsletter</a>
+              <a href="#" class=" font-semibold 
+              text-darkblue-300 hover:text-darkblue-500 p-2 transition">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="hidden md:flex flex-row gap-6 justify-center items-center mr-0 ml-auto">
+          <a href="#" class="py-2 px-4  bg-transparent text-white text-center font-bold 
+            rounded-[2.5rem] transition-all">
+            Login
+          </a>
+          <a href="#" class="py-2 px-6 bg-white text-lightred-100 text-center font-bold 
+          rounded-[2.5rem] hover:text-white hover:bg-lightred-50 transition-all">
+            Sign Up
+          </a>
+        </div>
 
         <div id="ham-menu" class="flex flex-col gap-[.375rem] ml-auto md:hidden">
           <span class="bg-white w-8 h-[.25rem] transition-all rounded-sm"></span>
@@ -52,11 +121,11 @@
       </nav>
     
       <div class="px-6">
-        <h1 class="text-white text-3xl text-center pb-7 font-semibold">
+        <h1 class="text-white text-3xl md:text-5xl text-center pb-7 font-semibold">
           A modern publishing platform
         </h1>
 
-        <p class="text-base font-light text-white text-center pb-14">
+        <p class="text-xl font-light text-white text-center pb-14">
           Grow your audience and build your online brand
         </p>
 
@@ -74,6 +143,7 @@
 
     </div>
   </header>
+
   <div id="mobile-menu" class="bg-white py-6 absolute mx-auto left-0 right-0 w-[18rem]
       flex flex-col items-center mt-[80px] rounded shadow-xl scale-0 transition-all
       z-10 top-0">
@@ -112,57 +182,76 @@
           </a>
       </div>
 
-
   <main class="mx-auto pt-28">
-    <h1 class="text-center font-bold text-darkblue-300 text-2xl pb-12">Designed for the future</h1>
+    <h1 class="text-center font-bold text-darkblue-300 text-2xl md:text-4xl pb-12 md:pb-16">Designed for the future</h1>
 
-    <div class="flex flex-col justify-center items-center px-6">
-      <img src="./images/illustration-editor-mobile.svg" alt="" aria-hidden="true" class="pb-12">
-      <div>
-        <h1 class="text-center font-bold text-darkblue-300 text-2xl pb-7 px-6">Introducing an extensible editor</h1>
-        <p class="text-center text-darkblue-200 text-lg pb-14">Blogr features an exceedingly intuitive interface which
+    <div class="flex flex-col justify-center items-center px-6
+    md:flex-row">
+      <img src="./images/illustration-editor-mobile.svg" alt="" aria-hidden="true" class="pb-12 md:hidden">
+      <img src="./images/illustration-editor-desktop.svg" alt="" aria-hidden="true" 
+      class="hidden max-w-[90%] md:block order-2 pb-12 mr-[-23.25rem] mt-[-7.25rem]">
+
+      <div class="md:container md:mx-auto md:pl-14">
+        <h1 class="text-center font-bold text-darkblue-300 text-2xl pb-7 px-6 
+        md:text-left md:px-0">Introducing an extensible editor</h1>
+        <p class="text-center text-darkblue-200 text-md pb-14 
+        md:text-left md:pr-28">Blogr features an exceedingly intuitive interface which
           lets you focus on one thing: creating content.
           The editor supports management of multiple blogs and allows easy manipulation of embeds such as images,
           videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or
           change the looks of a blog.</p>
-        <h1 class="text-center font-bold text-darkblue-300 text-2xl pb-7 px-6">Robust content management</h1>
-        <p class="text-center text-darkblue-200 text-lg pb-[17.3125rem]">
+        <h1 class="text-center font-bold text-darkblue-300 text-2xl pb-7 px-6 
+        md:text-left md:px-0">Robust content management</h1>
+        <p class="text-center text-darkblue-200 text-md pb-[17.3125rem] 
+        md:text-left md:pr-28">
           Flexible content management enables users to easily move through posts. Increase the usability of your blog
           by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
         </p>
       </div>
     </div>
 
-    <div class="bg-gradient-200 rounded-tr-[40px] rounded-bl-[40px]">
-      <div class="absolute w-[23rem] h-[23.375rem] left-0 right-0 mr-auto ml-auto overflow-hidden">
-        <img src="./images/bg-pattern-circles.svg" class="absolute scale-[1.4] top-[-25%]">
+    <div class="bg-gradient-200 rounded-tr-[40px] rounded-bl-[40px] flex flex-col
+    lg:flex-row">
+      <div class="absolute w-[23rem] h-[23.375rem] left-0 right-0 mr-auto ml-auto overflow-hidden
+      lg:relative lg:w-full lg:h-[30rem] m-0">
+        <img src="./images/bg-pattern-circles.svg" class="absolute scale-[1.4] top-[-25%]
+         lg:scale-100 lg:relative">
       </div>
-      <img src="./images/illustration-phones.svg" class="absolute mt-[-50%]">
+      <img src="./images/illustration-phones.svg" 
+      class="absolute mt-[-13.75rem] h-[25rem] left-1/2 translate-x-[-50%]
+       lg:h-[35rem] lg:left-0 lg:translate-x-0 lg:mt-[90px]">
 
-      <h1 class='text-center font-bold text-white text-3xl pb-8 pt-56 relative'>
+      <div class="basis-full">
+      <h1 class='text-center font-bold text-white text-3xl pb-8 pt-56 relative
+      lg:text-4xl lg:text-left'>
         State of the Art Infrastructure
       </h1>
-      <p class="text-base font-light text-darkblue-100 text-center pb-32 px-8">
+      <p class="text-base font-light text-darkblue-100 text-center pb-32 px-8
+      lg:text-lg lg:text-left lg:pr-20 lg:pl-0 lg:pb-28">
         With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity.
         This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
       </p>
+      </div>
     </div>
 
-    <div class="flex flex-col justify-center items-center ">
-      <img src="./images/illustration-laptop-mobile.svg" alt="" aria-hidden="true" class="py-16 scale-[1.3]">
-      <div class="flex flex-col justify-center items-center">
-        <h1 class="text-center font-bold text-darkblue-300 text-2xl pb-7 ">
+    <div class="flex flex-col justify-center items-center md:flex-row ">
+      <img src="./images/illustration-laptop-mobile.svg" alt="" aria-hidden="true" class="py-16 scale-[1.3] md:hidden">
+      <img src="./images/illustration-laptop-desktop.svg" alt="" aria-hidden="true" 
+      class="hidden py-16 md:block scale-[0.8] ml-[-20rem]">
+
+      <div class="flex flex-col justify-center items-center md:items-start md:ml-[-70px]">
+        <h1 class="text-center font-bold text-darkblue-300 text-2xl pb-7 md:text-left">
           Free, open, simple
         </h1>
-        <p class="text-center text-darkblue-200 pb-14 px-10">
+        <p class="text-center text-darkblue-200 pb-14 px-10 md:text-left md:pl-0 md:pr-20">
           Blogr is a free and open source application backed by a large community of helpful developers. It supports
           features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools,
           and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
         </p>
-        <h1 class="text-center font-bold text-darkblue-300 text-2xl pb-7">
+        <h1 class="text-center font-bold text-darkblue-300 text-2xl pb-7 md:text-left">
           Powerful tooling
         </h1>
-        <p class="text-center text-darkblue-200 px-8 pb-[6.25rem]">
+        <p class="text-center text-darkblue-200 px-8 pb-[6.25rem] md:text-left md:pl-0 md:pr-20">
           Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a
           breeze, but
           capable of producing even the most complicated sites.
@@ -173,11 +262,12 @@
   </main>
 
   <footer class="bg-darkblue-500 rounded-tr-[40px]">
-    <div class="container px-6 mx-auto flex flex-col items-center">
+    <div class="container px-6 mx-auto flex flex-col items-center
+    md:flex-row md:gap-32 lg:gap-52 md:items-start md:justify-start">
       <h1 class="py-16 text-white font-bold text-4xl">Blogr</h1>
 
-      <div class="flex flex-col items-center pb-14">
-        <h2 class="pb-6 text-white font-semibold">
+      <div class="flex flex-col items-center pb-14 md:py-16 md:items-start">
+        <h2 class="pb-6 text-white font-semibold md:leading-[2.5]">
           Product
         </h2>
         <a href="#" class="footer-link">Overview</a>
@@ -187,8 +277,8 @@
         <a href="#" class="footer-link">Integrations</a>
       </div>
 
-      <div class="flex flex-col items-center pb-14">
-        <h2 class="pb-6 text-white font-semibold">
+      <div class="flex flex-col items-center pb-14 md:py-16 md:items-start">
+        <h2 class="pb-6 text-white font-semibold md:leading-[2.5]">
           Company
         </h2>
         <a href="#" class="footer-link">About</a>
@@ -197,8 +287,8 @@
         <a href="#" class="footer-link">Careers</a>
       </div>
 
-      <div class="flex flex-col items-center pb-16">
-        <h2 class="pb-6 text-white font-semibold">
+      <div class="flex flex-col items-center pb-16 md:py-16 md:items-start">
+        <h2 class="pb-6 text-white font-semibold md:leading-[2.5]">
           Connect
         </h2>
         <a href="#" class="footer-link">Contact</a>
@@ -213,12 +303,6 @@
   
   Login
   Sign Up
-
-  A modern publishing platform
-  Grow your audience and build your online brand
-
-  Start for Free
-  Learn More
  -->
 
   <div class="attribution font-ubunto text-base">

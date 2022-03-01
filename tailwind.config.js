@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       backgroundImage:{
         'mobilebackground':"url('../images/bg-pattern-intro-mobile.svg')",
-        
+        'desktopbackground':"url('../images/bg-pattern-intro-desktop.svg')",
       },
       fontFamily: {
         overpass:['Overpass'],
