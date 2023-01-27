@@ -39,4 +39,3 @@ Users should be able to:
 
 - github - [khaled5321](https://github.com/khaled5321)
 - Frontend Mentor - [@khaled5321](https://www.frontendmentor.io/profile/khaled5321)
-- Twitter - [@KhaledHaggag121](https://twitter.com/KhaledHaggag121)
